@@ -7,7 +7,7 @@ aplikacja w heroku:  spring-security-01
 
 
 -----------------------------------------
-uruchamianie lokalne:  mvn package && java -jar target/Spring-Security-Registration-Process-01-1.0.jar
+uruchamianie lokalne:  mvn package && java -jar target/Spring-Security-Registration-Process-02-1.0.jar
 
 
 
