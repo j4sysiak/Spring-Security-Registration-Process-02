@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<!-- <html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'hello')}"> -->
+
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+	<title th:text="#{label.pages.home.title}">Title</title>
+</head>
+
+    <body>
+    	<div  th:text="#{label.pages.home.login}">login</div>  
+    	
+        <h1 th:inline="text">(hello.html) Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+        
+        <form th:action="logout" method="post">
+            <input type="submit" value="Log Out"/>
+        </form>
+    </body>
+</html>

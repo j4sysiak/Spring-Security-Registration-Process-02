@@ -1,0 +1,1 @@
+web: java -jar target/Spring-Security-Registration-Process-02-1.0.jar

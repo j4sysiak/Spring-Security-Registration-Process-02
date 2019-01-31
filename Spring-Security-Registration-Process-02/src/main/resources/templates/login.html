@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<!-- <html xmlns:th="http://www.thymeleaf.org" th:replace="~{fragments/layout :: layout (~{::body},'login')}"> -->
+ 
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>
+	<title th:text="#{label.pages.home.title}">Title</title>
+</head>
+
+<script type="text/javascript">
+function validate() {
+    if (document.f.username.value == "" && document.f.password.value == "") {
+		alert("Username and password are required");
+        document.f.username.focus();
+        return false;
+    }
+    if (document.f.username.value == "") {
+        alert("Username is required");
+        document.f.username.focus();
+        return false;
+    }
+    if (document.f.password.value == "") {
+    alert("Password is required");
+    document.f.password.focus();
+        return false;
+    }
+}
+</script>
+
+<style type="text/css">
+.wrapper{width:500px;margin-left:auto;margin-right:auto}
+label{padding-left:0 !important}
+</style>
+ 
+ 
+<body>
+	<div th:if="${param.error != null}" 	th:text="${session[SPRING_SECURITY_LAST_EXCEPTION]}">error</div>
+	<div th:if="${param.message != null}"  	th:text="${param.message[0]}">message</div>
+    <div th:if="${param.logout != null}" 	th:text="#{label.pages.home.logged}">logout</div>  
+    <div th:if="${param.login != null}" 	th:text="#{label.pages.home.login}">login</div>  
+    
+   <h1 th:text="#{label.form.loginTitle}">Header</h1>
+   
+   <form name='f' th:action="login" method='POST' onsubmit="return validate();">
+      <table>
+         <tr>
+            <td>User:</td>
+            <td><input type='text' name='username' value=''></td>
+         </tr>
+         <tr>
+            <td>Password:</td>
+            <td><input type='password' name='password' /></td>
+         </tr>
+         <tr>
+            <td><input name="submit" type="submit" value="Sign In" /></td>
+         </tr>
+      </table>
+  </form>
+</body>
+
+<a class="btn btn-default" th:href="@{/registration.html}" th:text="#{label.form.loginSignUp}">signup</a>
+</html>

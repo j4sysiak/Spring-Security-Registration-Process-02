@@ -1,0 +1,6 @@
+com\caveofprogramming\controllers\PageController.class
+com\caveofprogramming\controllers\AuthController.class
+com\caveofprogramming\controllers\GreetingController.class
+com\caveofprogramming\controllers\HelloController.class
+com\caveofprogramming\spring\MvcConfig.class
+com\caveofprogramming\App.class
