@@ -41,7 +41,7 @@ public class App extends SpringBootServletInitializer {
 
 		            String[] beanNames = ctx.getBeanDefinitionNames();
 		            Arrays.sort(beanNames);
-		            for (String beanName : beanNames) {
+		            for (String beanN5ame : beanNames) {
 		                //System.out.println(beanName);
 		            }
 
