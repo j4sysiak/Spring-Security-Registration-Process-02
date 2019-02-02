@@ -25,6 +25,6 @@
 	</http>
 
 	<beans:bean id="myAuthenticationSuccessHandler"
-		class="org.baeldung.security.MySimpleUrlAuthenticationSuccessHandler" />
+		class="com.caveofprogramming.security.MySimpleUrlAuthenticationSuccessHandler" />
 
 </beans:beans>

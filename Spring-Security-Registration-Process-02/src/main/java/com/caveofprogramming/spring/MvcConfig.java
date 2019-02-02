@@ -13,21 +13,10 @@ public class MvcConfig implements WebMvcConfigurer {
     }
 
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/home").setViewName("home");
-        registry.addViewController("/").setViewName("forward:/home");
-//    	registry.addViewController("/").setViewName("forward:/login");
-//    	registry.addViewController("/").setViewName("home");     oryginalnie tak było w https://github.com/Baeldung/spring-security-registration
-    	registry.addViewController("/hello").setViewName("hello");
-        registry.addViewController("/login").setViewName("login");
-        registry.addViewController("/registration.html");
-        
-        registry.addViewController("/about").setViewName("about");
-        registry.addViewController("/admin").setViewName("admin");
-        registry.addViewController("/error").setViewName("error");
-        registry.addViewController("/greeting").setViewName("greeting");
-        registry.addViewController("/index").setViewName("index");
-        registry.addViewController("/index2").setViewName("index2");
-        registry.addViewController("/info").setViewName("info");
+    	 registry.addViewController("/").setViewName("forward:/login");
+    	 registry.addViewController("/login");
+    	 registry.addViewController("/registration.html");
+    	 registry.addViewController("/logout.html");
     }
     
  

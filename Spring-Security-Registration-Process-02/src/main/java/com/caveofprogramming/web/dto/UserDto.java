@@ -1,5 +1,6 @@
 package com.caveofprogramming.web.dto;
 
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -11,22 +12,27 @@ import com.caveofprogramming.validation.ValidPassword;
 public class UserDto {
 	
     @NotNull
+    @NotEmpty
     @Size(min = 1, message = "{Size.userDto.firstName}")
     private String firstName;
      
     @NotNull
+    @NotEmpty
     @Size(min = 1, message = "{Size.userDto.lastName}")
     private String lastName;
      
     @ValidPassword
+    @NotEmpty
     private String password;
     
     @NotNull
+    @NotEmpty
     @Size(min = 1)
     private String matchingPassword;
      
     @ValidEmail
     @NotNull
+    @NotEmpty
     @Size(min = 1, message = "{Size.userDto.email}")
     private String email;
     

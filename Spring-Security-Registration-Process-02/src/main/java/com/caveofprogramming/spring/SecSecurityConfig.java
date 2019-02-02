@@ -15,8 +15,8 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @EnableWebSecurity
 public class SecSecurityConfig extends WebSecurityConfigurerAdapter {
 	
-//    @Autowired
-//    private UserDetailsService userDetailsService;
+//  @Autowired
+//  private UserDetailsService userDetailsService;
 //    
 //	@Autowired
 //	private PasswordEncoder passwordEncoder;
@@ -32,6 +32,7 @@ public class SecSecurityConfig extends WebSecurityConfigurerAdapter {
                 		     "/login*", 
                 		     "/logout*",
                 		     "/user/registration*",
+                		     "/registration*",
                 		     "/registration*").permitAll()
                 .anyRequest().authenticated()
                 .and()

@@ -4,6 +4,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -15,7 +16,6 @@ import org.springframework.web.servlet.ModelAndView;
 
 import com.caveofprogramming.model.User;
 import com.caveofprogramming.service.IUserService;
-import com.caveofprogramming.validation.EmailExistsException;
 import com.caveofprogramming.web.dto.UserDto;
 
 @Controller
@@ -23,14 +23,20 @@ public class RegistrationController {
 	
     @Autowired
     private IUserService userService;
+    
+    public RegistrationController() {
+        super();
+    }
 	
-	
-//	@RequestMapping(value = "/user/registration", method = RequestMethod.GET)
-//	public String showRegistrationForm(WebRequest request, Model model) {
-//	    UserDto userDto = new UserDto();
-//	    model.addAttribute("user", userDto);
-//	    return "registration";
-//	}
+    // API
+    
+	@RequestMapping(value = "/user/registration", method = RequestMethod.GET)
+	public String showRegistrationForm(WebRequest request, Model model) {
+	    UserDto userDto = new UserDto();
+	    model.addAttribute("user", userDto);
+	    return "registration";
+	}
+ 
 	
 	// Registration
 	
