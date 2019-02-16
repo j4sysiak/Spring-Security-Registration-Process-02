@@ -8,20 +8,21 @@
 </head>
 
 <script type="text/javascript">
+
 function validate() {
     if (document.f.username.value == "" && document.f.password.value == "") {
-		alert("Username and password are required");
+        alert("Username and password are required");
         document.f.username.focus();
         return false;
     }
     if (document.f.username.value == "") {
-        alert("Username is required");
+    	alert("Username is required");
         document.f.username.focus();
         return false;
     }
     if (document.f.password.value == "") {
-    alert("Password is required");
-    document.f.password.focus();
+    	alert("Password is required");
+        document.f.password.focus();
         return false;
     }
 }
@@ -49,7 +50,7 @@ label{padding-left:0 !important}
          </tr>
          <tr>
             <td>Password:</td>
-            <td><input type='password' name='password' /></td>
+            <td><input type='password' name='password' value=''></td>
          </tr>
          <tr>
             <td><input name="submit" type="submit" value="Sign In" /></td>

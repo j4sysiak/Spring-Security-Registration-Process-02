@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.caveofprogramming.HelloControllerTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 10.456 s <<< FAILURE! - in com.caveofprogramming.HelloControllerTest
-getHello(com.caveofprogramming.HelloControllerTest)  Time elapsed: 0.299 s  <<< FAILURE!
-java.lang.AssertionError: Status expected:<200> but was:<302>
-	at com.caveofprogramming.HelloControllerTest.getHello(HelloControllerTest.java:29)
-
